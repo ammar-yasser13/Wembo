@@ -1,0 +1,118 @@
+:root{
+    --white: #FFFFFF;
+    --dark: #18181B;
+    --darkLight: #1F1E22;
+    --blue: #0FA5E9;
+    --gradient-1: linear-gradient(92.88deg, #C7D2FE 35%, #38BDF8 59.04%, #C7D2FE 83.58%, #C7D2FE 83.58%);
+    --gradient-2: linear-gradient(180deg, #10A5E9 0%, #DE69A8 100%);
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: var(--darkLight);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+}
+.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+.hover {
+    color: var(--blue);
+}
+p,b{
+    color: var(--white);
+    opacity: 70%;
+}
+.gradient-1{
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.gradient-2{
+    background: var(--gradient-2);
+}
+.cards .card{
+    transition: .3s ease-in-out background;
+    cursor: pointer;
+}
+.cards .card.active{
+    background-color: var(--blue);
+}
+.cards .card:hover{
+    background-color: var(--blue);
+}
+.cards.price .card:hover {
+    background-color: var(--darkLight);
+}
+body::before{
+    width: 450px;
+    content: "";
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    background: linear-gradient(269.86deg, #10A5E9 1.63%, #DE69A8 99.03%);
+    filter: blur(60px);
+    border-radius: 60px;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+body::after{
+    width: 450px;
+    content: "";
+    height: 50px;
+    position: absolute;
+    bottom: -50%;
+    right: 0%;
+    background: linear-gradient(269.86deg, #10A5E9 1.63%, #DE69A8 99.03%);
+    filter: blur(60px);
+    border-radius: 60px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.download::before{
+    width: 450px;
+    content: "";
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    background: linear-gradient(269.86deg, #10A5E9 1.63%, #DE69A8 99.03%);
+    filter: blur(60px);
+    border-radius: 60px;
+    transform: rotate(-45deg);
+    z-index: 20;
+    z-index: -1;
+}
+
+.hidden-bottom{
+    transform: translateY(150px);
+    opacity: 0;
+}
+.hidden-top{
+    transform: translateY(-150px);
+    opacity: 0;
+}
+.hidden-left{
+    transform: translateX(-1000px);
+    opacity: 0;
+}
+.hidden-right{
+    transform: translateX(1000px);
+    opacity: 0;
+}
+.show-all{
+    transform: translate(0,0);
+    opacity: 1;
+}

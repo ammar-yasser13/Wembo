@@ -1,0 +1,11 @@
+ul li a{
+    color: white;
+    transition: .3s ease-in-out all;
+    opacity: 70%;
+}
+ul li a:hover{
+    opacity: 100%;
+}
+ul li a.active{
+    opacity: 100%;
+}
